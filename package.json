@@ -6,7 +6,8 @@
     "changeset": "changeset add",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "version": "changeset version"
   },
   "packageManager": "pnpm@8.6.10",
   "dependencies": {
