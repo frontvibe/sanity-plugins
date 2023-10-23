@@ -1,17 +1,25 @@
 {
   "private": true,
+  "name": "colors",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
-    "turbo": "latest"
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "postinstall": "manypkg check",
+    "fix": "manypkg fix"
   },
   "packageManager": "pnpm@8.6.10",
-  "name": "colors"
+  "dependencies": {
+    "@manypkg/cli": "^0.21.0",
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3",
+    "tsconfig": "0.0.0",
+    "turbo": "latest"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "framer-motion@10.16.4": "patches/framer-motion@10.16.4.patch"
+    }
+  }
 }
