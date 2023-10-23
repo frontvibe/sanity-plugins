@@ -26,7 +26,7 @@ importers:
         specifier: ^3.0.3
         version: 3.0.3
       tsconfig:
-        specifier: 0.0.0
+        specifier: workspace:*
         version: link:packages/tsconfig
       turbo:
         specifier: latest
@@ -35,7 +35,7 @@ importers:
   apps/sanity-studio:
     dependencies:
       '@headless.build/sanity-color-picker':
-        specifier: 0.0.0
+        specifier: workspace:*
         version: link:../../packages/sanity-color-picker
       '@sanity/vision':
         specifier: ^3.18.1
@@ -189,13 +189,13 @@ importers:
         specifier: ^18.2.0
         version: 18.2.3
       eslint-config-custom:
-        specifier: 0.0.0
+        specifier: workspace:*
         version: link:../eslint-config-custom
       react:
         specifier: ^18.2.0
         version: 18.2.0
       tsconfig:
-        specifier: 0.0.0
+        specifier: workspace:*
         version: link:../tsconfig
       typescript:
         specifier: ^5.2.2
