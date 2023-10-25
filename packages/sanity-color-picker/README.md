@@ -1,11 +1,11 @@
-# @headfront/sanity-color-picker
-
 > This is a **Sanity Studio v3** plugin.
 
 ## Installation
 
 ```sh
-npm install @headfront/sanity-color-picker
+npm install @headless.build/sanity-color-picker
+yarn add @headless.build/sanity-color-picker
+pnpm install @headless.build/sanity-color-picker
 ```
 
 ## Usage
@@ -14,11 +14,11 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from '@headfront/sanity-color-picker'
+import {colorPicker} from '@headless.build/sanity-color-picker'
 
 export default defineConfig({
   //...
-  plugins: [myPlugin({})],
+  plugins: [colorPicker()],
 })
 ```
 
