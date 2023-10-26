@@ -66,9 +66,9 @@ function defineFontField(args: {title: string; name: string}) {
       },
       {
         type: 'boolean',
-        name: 'antialised',
-        title: 'Antialising',
-        description: 'Enable antialising to smooth the font.',
+        name: 'antialiased',
+        title: 'Antialiasing',
+        description: 'Enable antialiasing to smooth the font.',
       },
       {
         type: 'array',
