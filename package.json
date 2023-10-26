@@ -10,7 +10,8 @@
     "version": "changeset version"
   },
   "workspaces": [
-    "packages/sanity-color-picker"
+    "packages/sanity-color-picker",
+    "packages/sanity-font-picker"
   ],
   "packageManager": "pnpm@8.6.10",
   "dependencies": {
