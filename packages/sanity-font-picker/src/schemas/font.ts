@@ -1,8 +1,10 @@
+import {StringIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
 export const font = defineType({
   name: 'fontPicker',
   type: 'document',
+  icon: StringIcon,
   title: 'Typography',
   fields: [
     defineFontField({
