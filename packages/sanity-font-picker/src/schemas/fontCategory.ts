@@ -1,8 +1,10 @@
 import {defineType} from 'sanity'
+import {StringIcon} from '@sanity/icons'
 
 export default defineType({
   type: 'object',
   name: 'fontCategory',
+  icon: StringIcon,
   fields: [
     {
       type: 'string',
