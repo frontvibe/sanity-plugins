@@ -1,5 +1,11 @@
 # @headless.build/sanity-font-picker
 
+## 2.2.0
+
+### Minor Changes
+
+- 70d818f: Update schema
+
 ## 2.1.0
 
 ### Minor Changes
