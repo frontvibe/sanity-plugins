@@ -1,5 +1,11 @@
 # @headless.build/sanity-font-picker
 
+## 2.2.1
+
+### Patch Changes
+
+- 3940b96: Add icon to font-picker
+
 ## 2.2.0
 
 ### Minor Changes
