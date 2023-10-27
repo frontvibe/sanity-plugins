@@ -1,6 +1,8 @@
 import {StringIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
+import ArrayMaxItems from '../components/ArrayMaxItems'
+
 export const font = defineType({
   name: 'typography',
   type: 'document',
@@ -36,46 +38,9 @@ function defineFontField(args: {title: string; name: string}) {
   return defineField({
     title,
     name,
-    type: 'object',
-    fields: [
-      {
-        type: 'string',
-        name: 'fontName',
-        title: 'Font name',
-      },
-      {
-        type: 'string',
-        name: 'fontType',
-        title: 'Font type',
-        description:
-          'Select a font type (will be used to display a fallback stystem font while loading the font assets).',
-        options: {
-          list: [
-            {
-              title: 'Serif',
-              value: 'serif',
-            },
-            {
-              title: 'Sans-serif',
-              value: 'sans-serif',
-            },
-          ],
-          layout: 'radio',
-        },
-        initialValue: 'sans-serif',
-      },
-      {
-        type: 'boolean',
-        name: 'antialiased',
-        title: 'Antialiasing',
-        description: 'Enable antialiasing to smooth the font.',
-      },
-      {
-        type: 'array',
-        name: 'fontAssets',
-        title: 'Font assets',
-        of: [{type: 'fontAsset'}],
-      },
-    ],
+    type: 'array',
+    of: [{type: 'fontCategory'}],
+    components: {input: ArrayMaxItems},
+    validation: (Rule: any) => Rule.max(1),
   })
 }
