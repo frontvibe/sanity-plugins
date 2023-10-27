@@ -1,3 +1,4 @@
+import {StringIcon} from '@sanity/icons'
 import {File, defineType} from 'sanity'
 
 const fontWeights = [
@@ -33,6 +34,7 @@ function validateFont(args: {Rule: any; mimeType: 'woff2' | 'woff' | 'ttf'}) {
 export default defineType({
   name: 'fontAsset',
   type: 'object',
+  icon: StringIcon,
   fields: [
     {
       type: 'file',
