@@ -2,7 +2,7 @@ import {StringIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
 export const font = defineType({
-  name: 'fontPicker',
+  name: 'typography',
   type: 'document',
   icon: StringIcon,
   title: 'Typography',
@@ -40,15 +40,15 @@ function defineFontField(args: {title: string; name: string}) {
     fields: [
       {
         type: 'string',
-        name: 'fontFamily',
-        title: 'Font family',
+        name: 'fontName',
+        title: 'Font name',
       },
       {
         type: 'string',
-        name: 'fontCategory',
-        title: 'Font category',
+        name: 'fontType',
+        title: 'Font type',
         description:
-          'Select a font category (will be used to display a fallback stystem font while loading the font files).',
+          'Select a font type (will be used to display a fallback stystem font while loading the font assets).',
         options: {
           list: [
             {
@@ -72,9 +72,9 @@ function defineFontField(args: {title: string; name: string}) {
       },
       {
         type: 'array',
-        name: 'fontFiles',
-        title: 'Font files',
-        of: [{type: 'fontInput'}],
+        name: 'fontAssets',
+        title: 'Font assets',
+        of: [{type: 'fontAsset'}],
       },
     ],
   })
