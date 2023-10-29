@@ -11,7 +11,7 @@ const color = defineType({
       initialValue: 'Scheme',
     },
     {
-      type: 'polarisColorPicker',
+      type: 'colorPicker',
       name: 'background',
     },
   ],
