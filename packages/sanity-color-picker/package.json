@@ -41,17 +41,19 @@
   "dependencies": {
     "@sanity/icons": "^2.6.0",
     "@sanity/incompatible-plugin": "^1.0.4",
-    "@sanity/ui": "^1.8.2",
-    "@shopify/polaris": "^12.0.0",
-    "lodash": "^4.17.21"
+    "@sanity/ui": "^1.8.3",
+    "@shopify/polaris": "^12.0.1",
+    "lodash": "^4.17.21",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@sanity/pkg-utils": "^3.1.1",
+    "@sanity/pkg-utils": "^3.2.1",
     "@sanity/plugin-kit": "^3.1.10",
+    "@sanity/types": "^3.18.1",
     "@types/lodash": "^4.14.200",
-    "@types/react": "^18.2.31",
-    "@typescript-eslint/eslint-plugin": "^6.8.0",
-    "@typescript-eslint/parser": "^6.8.0",
+    "@types/react": "^18.2.33",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-sanity": "^7.0.1",
