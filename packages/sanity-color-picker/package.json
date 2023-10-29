@@ -80,5 +80,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "sanityPlugin": {
+    "verifyPackage": {
+      "dependencies": false
+    }
   }
 }
