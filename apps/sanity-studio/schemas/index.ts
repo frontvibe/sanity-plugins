@@ -14,6 +14,26 @@ const color = defineType({
       type: 'colorPicker',
       name: 'background',
     },
+    {
+      type: 'rangeSlider',
+      name: 'paddingTop',
+      title: 'Top padding',
+      options: {
+        suffix: 'px',
+        min: 0,
+        max: 150,
+      },
+    },
+    {
+      type: 'rangeSlider',
+      name: 'paddingBottom',
+      title: 'Bottom padding',
+      options: {
+        suffix: 'px',
+        min: 0,
+        max: 150,
+      },
+    },
   ],
 })
 
