@@ -40,6 +40,9 @@ importers:
       '@headless.build/sanity-font-picker':
         specifier: workspace:*
         version: link:../../packages/sanity-font-picker
+      '@headless.build/sanity-plugin-range-slider':
+        specifier: workspace:*
+        version: link:../../packages/sanity-range-slider
       '@sanity/vision':
         specifier: ^3.18.1
         version: 3.18.1(@babel/runtime@7.23.2)(@codemirror/lint@6.4.2)(@codemirror/state@6.3.1)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.1.0)(codemirror@6.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
@@ -196,6 +199,88 @@ importers:
       '@sanity/pkg-utils':
         specifier: ^3.2.1
         version: 3.2.1(typescript@5.2.2)
+      '@sanity/plugin-kit':
+        specifier: ^3.1.10
+        version: 3.1.10(eslint@8.52.0)(typescript@5.2.2)
+      '@types/react':
+        specifier: ^18.2.33
+        version: 18.2.33
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.9.0
+        version: 6.9.0(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)(typescript@5.2.2)
+      '@typescript-eslint/parser':
+        specifier: ^6.9.0
+        version: 6.9.0(eslint@8.52.0)(typescript@5.2.2)
+      eslint:
+        specifier: ^8.52.0
+        version: 8.52.0
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.0.0(eslint@8.52.0)
+      eslint-config-sanity:
+        specifier: ^7.0.1
+        version: 7.0.1(@typescript-eslint/eslint-plugin@6.9.0)(@typescript-eslint/parser@6.9.0)(eslint-plugin-react@7.33.2)(eslint@8.52.0)
+      eslint-plugin-prettier:
+        specifier: ^5.0.1
+        version: 5.0.1(eslint-config-prettier@9.0.0)(eslint@8.52.0)(prettier@3.0.3)
+      eslint-plugin-react:
+        specifier: ^7.33.2
+        version: 7.33.2(eslint@8.52.0)
+      eslint-plugin-react-hooks:
+        specifier: ^4.6.0
+        version: 4.6.0(eslint@8.52.0)
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      prettier:
+        specifier: ^3.0.3
+        version: 3.0.3
+      prettier-plugin-packagejson:
+        specifier: ^2.4.6
+        version: 2.4.6(prettier@3.0.3)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-is:
+        specifier: ^18.2.0
+        version: 18.2.0
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+      sanity:
+        specifier: ^3.18.1
+        version: 3.18.1(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+      styled-components:
+        specifier: ^5.3.11
+        version: 5.3.11(@babel/core@7.23.2)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
+  packages/sanity-range-slider:
+    dependencies:
+      '@sanity/icons':
+        specifier: ^2.6.0
+        version: 2.6.0(react@18.2.0)
+      '@sanity/incompatible-plugin':
+        specifier: ^1.0.4
+        version: 1.0.4(react-dom@18.2.0)(react@18.2.0)
+      '@sanity/ui':
+        specifier: ^1.8.3
+        version: 1.8.3(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+      '@shopify/polaris':
+        specifier: ^12.0.1
+        version: 12.0.1(react-dom@18.2.0)(react@18.2.0)
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+    devDependencies:
+      '@sanity/pkg-utils':
+        specifier: ^3.2.2
+        version: 3.2.2(typescript@5.2.2)
       '@sanity/plugin-kit':
         specifier: ^3.1.10
         version: 3.1.10(eslint@8.52.0)(typescript@5.2.2)
@@ -455,7 +540,7 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
       debug: 4.3.4(supports-color@5.5.0)
       lodash.debounce: 4.0.8
-      resolve: 1.22.2
+      resolve: 1.22.8
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2504,7 +2589,7 @@ packages:
   /@manypkg/find-root@1.1.0:
     resolution: {integrity: sha512-mki5uBvhHzO8kYYix/WRy2WX8S3B5wdVSc9D6KcU5lQNglP2yt58/VfLuAK49glRXChosY8ap2oJ1qgma3GUVA==}
     dependencies:
-      '@babel/runtime': 7.21.5
+      '@babel/runtime': 7.23.2
       '@types/node': 12.20.55
       find-up: 4.1.0
       fs-extra: 8.1.0
@@ -2873,6 +2958,20 @@ packages:
       rollup: 4.1.5
     dev: true
 
+  /@rollup/plugin-replace@5.0.5(rollup@4.1.5):
+    resolution: {integrity: sha512-rYO4fOi8lMaTg/z5Jb+hKnrHHVn8j2lwkqwyS4kTRhKyWOLf2wST2sWXr4WzWiTcoHTp2sTjqUbqIj2E39slKQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.0.5(rollup@4.1.5)
+      magic-string: 0.30.5
+      rollup: 4.1.5
+    dev: true
+
   /@rollup/plugin-terser@0.4.4(rollup@3.29.4):
     resolution: {integrity: sha512-XHeJC5Bgvs8LfukDwWZp7yeqin6ns8RTl2B9avbejt6tZqsqvVoWI7ZTQrcNsfKEDWBTnTxM8nMDkO2IFFbd0A==}
     engines: {node: '>=14.0.0'}
@@ -3053,7 +3152,7 @@ packages:
   /@rushstack/rig-package@0.5.1:
     resolution: {integrity: sha512-pXRYSe29TjRw7rqxD4WS3HN/sRSbfr+tJs4a9uuaSIBAITbUggygdhuG0VrO0EO+QqH91GhYMN4S6KRtOEmGVA==}
     dependencies:
-      resolve: 1.22.2
+      resolve: 1.22.8
       strip-json-comments: 3.1.1
     dev: true
 
@@ -3314,6 +3413,58 @@ packages:
       '@rollup/plugin-json': 6.0.1(rollup@4.1.5)
       '@rollup/plugin-node-resolve': 15.2.3(rollup@4.1.5)
       '@rollup/plugin-replace': 5.0.4(rollup@4.1.5)
+      '@rollup/plugin-terser': 0.4.4(rollup@4.1.5)
+      browserslist: 4.22.1
+      cac: 6.7.14
+      chalk: 4.1.2
+      chokidar: 3.5.3
+      esbuild: 0.19.5
+      esbuild-register: 3.5.0(esbuild@0.19.5)
+      find-config: 1.0.0
+      get-latest-version: 5.1.0
+      git-url-parse: 13.1.1
+      globby: 11.1.0
+      jsonc-parser: 3.2.0
+      mkdirp: 3.0.1
+      outdent: 0.8.0
+      parse-git-config: 3.0.0
+      pkg-up: 3.1.0
+      prettier: 3.0.3
+      prettier-plugin-packagejson: 2.4.6(prettier@3.0.3)
+      pretty-bytes: 5.6.0
+      prompts: 2.4.2
+      rimraf: 4.4.1
+      rollup: 4.1.5
+      rollup-plugin-esbuild: 6.1.0(esbuild@0.19.5)(rollup@4.1.5)
+      rxjs: 7.8.1
+      treeify: 1.1.0
+      typescript: 5.2.2
+      uuid: 9.0.1
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - '@types/babel__core'
+      - '@types/node'
+      - supports-color
+    dev: true
+
+  /@sanity/pkg-utils@3.2.2(typescript@5.2.2):
+    resolution: {integrity: sha512-xLwoq9oLXUJG56N/ntbjRttCkgvI9gp1qJut1opf3qXyNe9ijzlEDkkENWQwGM6bdg0ZeGqoqaCfUJEOiLI2mQ==}
+    engines: {node: '>=16.0.0'}
+    hasBin: true
+    peerDependencies:
+      typescript: ^4.7 || ^5
+    dependencies:
+      '@babel/core': 7.23.2
+      '@babel/preset-env': 7.23.2(@babel/core@7.23.2)
+      '@babel/types': 7.23.0
+      '@microsoft/api-extractor': 7.38.0
+      '@microsoft/tsdoc-config': 0.16.2
+      '@rollup/plugin-alias': 5.0.1(rollup@4.1.5)
+      '@rollup/plugin-babel': 6.0.4(@babel/core@7.23.2)(rollup@4.1.5)
+      '@rollup/plugin-commonjs': 25.0.7(rollup@4.1.5)
+      '@rollup/plugin-json': 6.0.1(rollup@4.1.5)
+      '@rollup/plugin-node-resolve': 15.2.3(rollup@4.1.5)
+      '@rollup/plugin-replace': 5.0.5(rollup@4.1.5)
       '@rollup/plugin-terser': 0.4.4(rollup@4.1.5)
       browserslist: 4.22.1
       cac: 6.7.14
@@ -3660,7 +3811,7 @@ packages:
   /@types/hoist-non-react-statics@3.3.4:
     resolution: {integrity: sha512-ZchYkbieA+7tnxwX/SCBySx9WwvWR8TaP5tb2jRAzwvLb/rWchGw3v0w3pqUbUvj0GCwW2Xz/AVPSk6kUGctXQ==}
     dependencies:
-      '@types/react': 18.2.31
+      '@types/react': 18.2.33
       hoist-non-react-statics: 3.3.2
     dev: true
 
@@ -3733,7 +3884,7 @@ packages:
   /@types/react-dom@18.2.3:
     resolution: {integrity: sha512-hxXEXWxFJXbY0LMj/T69mznqOZJXNtQMqVxIiirVAZnnpeYiD4zt+lPsgcr/cfWg2VLsxZ1y26vigG03prYB+Q==}
     dependencies:
-      '@types/react': 18.2.31
+      '@types/react': 18.2.33
     dev: true
 
   /@types/react-is@18.2.3:
@@ -4423,7 +4574,7 @@ packages:
     resolution: {integrity: sha512-x1FCFnFifvYDDzTaLII71vG5uvDwgtmDTEVWAxrgeiR8VjMONcCXJx7E+USjDtHlwFmt9MysbqgF9b9Vjr6w+w==}
     engines: {node: '>=4'}
     dependencies:
-      tslib: 2.5.0
+      tslib: 2.6.2
     dev: true
 
   /async@3.2.4:
@@ -9148,7 +9299,7 @@ packages:
     peerDependencies:
       react: ^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@babel/runtime': 7.21.5
+      '@babel/runtime': 7.23.2
       react: 18.2.0
 
   /react-copy-to-clipboard@5.1.0(react@18.2.0):
@@ -9392,7 +9543,7 @@ packages:
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}
     dependencies:
-      '@babel/runtime': 7.21.5
+      '@babel/runtime': 7.23.2
     dev: true
 
   /regexp-tree@0.1.27:
@@ -10269,7 +10420,7 @@ packages:
     resolution: {integrity: sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA==}
     dependencies:
       spdx-expression-parse: 3.0.1
-      spdx-license-ids: 3.0.13
+      spdx-license-ids: 3.0.16
 
   /spdx-exceptions@2.3.0:
     resolution: {integrity: sha512-/tTrYOC7PPI1nUAgx34hUpqXuyJG+DTHJTnIULG4rDygi4xu/tfgmq1e1cIRwRzwZgo4NLySi+ricLkZkw4i5A==}
@@ -10278,14 +10429,10 @@ packages:
     resolution: {integrity: sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==}
     dependencies:
       spdx-exceptions: 2.3.0
-      spdx-license-ids: 3.0.13
-
-  /spdx-license-ids@3.0.13:
-    resolution: {integrity: sha512-XkD+zwiqXHikFZm4AX/7JSCXA98U5Db4AFd5XUg/+9UNtnH75+Z9KxtpYiJZx36mUDVOwH83pl7yvCer6ewM3w==}
+      spdx-license-ids: 3.0.16
 
   /spdx-license-ids@3.0.16:
     resolution: {integrity: sha512-eWN+LnM3GR6gPu35WxNgbGl8rmY1AEmoMDvL/QD6zYmPWgywxWqJWNdLGT+ke8dKNWrcYgYjPpG5gbTfghP8rw==}
-    dev: true
 
   /speakingurl@14.0.1:
     resolution: {integrity: sha512-1POYv7uv2gXoyGFpBCmpDVSNV74IfsWlDW216UPjbWufNf+bSU6GdbDsxdcxtfwb4xlI3yxzOTKClUosxARYrQ==}
