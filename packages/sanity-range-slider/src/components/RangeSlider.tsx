@@ -1,7 +1,7 @@
 import {RangeSlider} from '@shopify/polaris'
-import {CSSProperties, useCallback, useMemo, useState} from 'react'
+import {CSSProperties, ChangeEvent, useCallback, useMemo, useState} from 'react'
 import {NumberInputProps, set} from 'sanity'
-import {useTheme} from '@sanity/ui'
+import {Flex, TextInput, useTheme} from '@sanity/ui'
 import _ from 'lodash'
 
 const debounce = _.debounce
@@ -43,7 +43,9 @@ export function RangeSliderInput(props: RangeSliderInputProps) {
   const {sanity: sanityTheme} = useTheme()
 
   return (
-    <div
+    <Flex
+      align={'center'}
+      gap={4}
       style={
         {
           '--p-color-bg-fill-brand': sanityTheme.color.dark
@@ -54,26 +56,65 @@ export function RangeSliderInput(props: RangeSliderInputProps) {
         } as CSSProperties
       }
     >
-      <RangeSlider
-        label="Slider"
-        labelHidden
-        output
-        min={min || 0}
-        max={max || 100}
+      <div
+        style={{
+          flex: '1',
+        }}
+      >
+        <RangeSlider
+          label="Slider"
+          labelHidden
+          output
+          min={min || 0}
+          max={max || 100}
+          value={rangeValue}
+          onChange={handleRangeSliderChange}
+        />
+      </div>
+      <NumberInput
         value={rangeValue}
-        onChange={handleRangeSliderChange}
-        suffix={
-          <p
-            style={{
-              minWidth: '24px',
-              textAlign: 'right',
-            }}
-          >
-            {rangeValue}
-            {suffix && `${suffix}`}
-          </p>
-        }
+        min={min}
+        max={max}
+        suffix={suffix || ''}
+        setValue={setRangeValue}
       />
-    </div>
+    </Flex>
   )
+}
+
+function NumberInput(props: {
+  suffix?: string
+  min?: number
+  max?: number
+  value: number
+  setValue: (value: number) => void
+}) {
+  const {suffix, min, max, value, setValue} = props
+
+  const handleInputChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.currentTarget.value ? parseFloat(e.currentTarget.value) : 0)
+    },
+    [setValue],
+  )
+
+  return (
+    <TextInput
+      style={{
+        maxWidth: '8rem',
+      }}
+      min={min}
+      max={max}
+      onChange={handleInputChange}
+      type="number"
+      value={value}
+      iconRight={<p>{suffix}</p>}
+    />
+  )
+}
+
+NumberInput.defaultProps = {
+  suffix: '',
+  min: 0,
+  max: 100,
 }
