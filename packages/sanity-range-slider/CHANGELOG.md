@@ -1,5 +1,11 @@
 # @headless.build/sanity-plugin-range-slider
 
+## 1.1.0
+
+### Minor Changes
+
+- 62c1a00: Fix Range slider, value now updates on input change
+
 ## 1.0.2
 
 ### Patch Changes
