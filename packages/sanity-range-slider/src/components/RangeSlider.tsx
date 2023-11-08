@@ -31,14 +31,14 @@ export function RangeSliderInput(props: RangeSliderInputProps) {
     [onChange],
   )
 
-  const debouncedColorChange = useMemo(() => debounce(emitSetValue, 100), [emitSetValue])
+  const debouncedSliderChange = useMemo(() => debounce(emitSetValue, 100), [emitSetValue])
 
   const handleRangeSliderChange = useCallback(
     (sliderValue: number) => {
       setRangeValue(sliderValue)
-      debouncedColorChange(sliderValue)
+      debouncedSliderChange(sliderValue)
     },
-    [debouncedColorChange, setRangeValue],
+    [debouncedSliderChange, setRangeValue],
   )
   const {sanity: sanityTheme} = useTheme()
 
@@ -77,6 +77,7 @@ export function RangeSliderInput(props: RangeSliderInputProps) {
         max={max}
         suffix={suffix || ''}
         setValue={setRangeValue}
+        onChange={onChange}
       />
     </Flex>
   )
@@ -88,14 +89,25 @@ function NumberInput(props: {
   max?: number
   value: number
   setValue: (value: number) => void
+  onChange: RangeSliderInputProps['onChange']
 }) {
-  const {suffix, min, max, value, setValue} = props
+  const {suffix, min, max, value, setValue, onChange} = props
+
+  const emitSetValue = useCallback(
+    (nextValue: number) => {
+      onChange(set(nextValue))
+    },
+    [onChange],
+  )
+
+  const debouncedInputChange = useMemo(() => debounce(emitSetValue, 100), [emitSetValue])
 
   const handleInputChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
       setValue(e.currentTarget.value ? parseFloat(e.currentTarget.value) : 0)
+      debouncedInputChange(e.currentTarget.value ? parseFloat(e.currentTarget.value) : 0)
     },
-    [setValue],
+    [setValue, debouncedInputChange],
   )
 
   return (
