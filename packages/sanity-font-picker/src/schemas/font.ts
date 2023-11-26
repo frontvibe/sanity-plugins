@@ -23,12 +23,7 @@ export const font = defineType({
     }),
   ],
   preview: {
-    prepare() {
-      const title = 'Typography settings'
-      return {
-        title,
-      }
-    },
+    prepare: () => ({title: 'Typography'}),
   },
 })
 
