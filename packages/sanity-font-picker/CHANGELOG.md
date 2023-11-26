@@ -1,5 +1,11 @@
 # @headless.build/sanity-font-picker
 
+## 2.2.3
+
+### Patch Changes
+
+- 711560b: Update document title
+
 ## 2.2.2
 
 ### Patch Changes
