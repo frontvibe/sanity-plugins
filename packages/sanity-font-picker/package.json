@@ -1,6 +1,6 @@
 {
   "name": "@headless.build/sanity-font-picker",
-  "version": "2.2.3",
+  "version": "3.0.0",
   "description": "",
   "keywords": [
     "sanity",
@@ -68,7 +68,7 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "@headless.build/sanity-plugin-range-slider": "^1",
+    "@headless.build/sanity-plugin-range-slider": "^1.1.1",
     "react": "^18",
     "sanity": "^3"
   },
