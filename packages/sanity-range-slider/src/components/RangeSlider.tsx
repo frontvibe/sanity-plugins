@@ -12,6 +12,7 @@ type RangeSliderInputProps = NumberInputProps & {
       suffix?: string
       min?: number
       max?: number
+      step?: number
     }
   }
 }
@@ -22,6 +23,7 @@ export function RangeSliderInput(props: RangeSliderInputProps) {
   const suffix = options?.suffix
   const min = options?.min
   const max = options?.max
+  const step = options?.step || 1
   const [rangeValue, setRangeValue] = useState(value || 0)
 
   const emitSetValue = useCallback(
@@ -65,6 +67,7 @@ export function RangeSliderInput(props: RangeSliderInputProps) {
           label="Slider"
           labelHidden
           output
+          step={step}
           min={min || 0}
           max={max || 100}
           value={rangeValue}
@@ -75,6 +78,7 @@ export function RangeSliderInput(props: RangeSliderInputProps) {
         value={rangeValue}
         min={min}
         max={max}
+        step={step}
         suffix={suffix || ''}
         setValue={setRangeValue}
         onChange={onChange}
@@ -88,17 +92,13 @@ function NumberInput(props: {
   min?: number
   max?: number
   value: number
+  step: number
   setValue: (value: number) => void
   onChange: RangeSliderInputProps['onChange']
 }) {
-  const {suffix, min, max, value, setValue, onChange} = props
+  const {suffix, min, max, value, setValue, onChange, step} = props
 
-  const emitSetValue = useCallback(
-    (nextValue: number) => {
-      onChange(set(nextValue))
-    },
-    [onChange],
-  )
+  const emitSetValue = useCallback((nextValue: number) => onChange(set(nextValue)), [onChange])
 
   const debouncedInputChange = useMemo(() => debounce(emitSetValue, 100), [emitSetValue])
 
@@ -117,6 +117,7 @@ function NumberInput(props: {
       }}
       min={min}
       max={max}
+      step={step}
       onChange={handleInputChange}
       type="number"
       value={value}
