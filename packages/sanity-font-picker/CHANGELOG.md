@@ -1,5 +1,16 @@
 # @headless.build/sanity-font-picker
 
+## 3.0.0
+
+### Major Changes
+
+- 4eaef3a: Add new settings to fonts and rangSlider
+
+### Patch Changes
+
+- Updated dependencies [4eaef3a]
+  - @headless.build/sanity-plugin-range-slider@1.1.1
+
 ## 2.2.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @headless.build/sanity-plugin-range-slider
 
+## 1.1.1
+
+### Patch Changes
+
+- 4eaef3a: Add new settings to fonts and rangSlider
+
 ## 1.1.0
 
 ### Minor Changes
