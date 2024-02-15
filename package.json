@@ -16,12 +16,12 @@
   ],
   "packageManager": "pnpm@8.6.10",
   "dependencies": {
-    "@changesets/cli": "^2.26.2",
-    "@manypkg/cli": "^0.21.0",
-    "eslint": "^8.52.0",
-    "prettier": "^3.0.3",
+    "@changesets/cli": "^2.27.1",
+    "@manypkg/cli": "^0.21.2",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
     "tsconfig": "workspace:*",
-    "turbo": "^1.11.3"
+    "turbo": "^1.12.4"
   },
   "pnpm": {
     "patchedDependencies": {
