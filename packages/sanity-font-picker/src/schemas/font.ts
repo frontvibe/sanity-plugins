@@ -46,7 +46,7 @@ export const font = defineType({
           options: {
             min: 0.8,
             max: 2,
-            step: 0.2,
+            step: 0.025,
           },
           initialValue: 1.2,
         },
