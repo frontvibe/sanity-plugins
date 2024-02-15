@@ -1,5 +1,11 @@
 # @headless.build/sanity-color-picker
 
+## 1.1.1
+
+### Patch Changes
+
+- 59aa9db: Update font-picker and color-picker
+
 ## 1.1.0
 
 ### Minor Changes

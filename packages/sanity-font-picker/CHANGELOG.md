@@ -1,5 +1,11 @@
 # @headless.build/sanity-font-picker
 
+## 3.0.1
+
+### Patch Changes
+
+- 59aa9db: Update font-picker and color-picker
+
 ## 3.0.0
 
 ### Major Changes
