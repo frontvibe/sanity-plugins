@@ -1,5 +1,5 @@
 import {StringIcon} from '@sanity/icons'
-import {File, defineType} from 'sanity'
+import {File, defineField, defineType} from 'sanity'
 
 const fontWeights = [
   {title: 'Thin - 100', value: 100},
@@ -36,7 +36,7 @@ export default defineType({
   type: 'object',
   icon: StringIcon,
   fields: [
-    {
+    defineField({
       type: 'file',
       name: 'woff2',
       title: 'WOFF2 file',
@@ -47,8 +47,8 @@ export default defineType({
           mimeType: 'woff2',
           Rule,
         }),
-    },
-    {
+    }),
+    defineField({
       type: 'file',
       name: 'woff',
       title: 'WOFF file',
@@ -58,8 +58,8 @@ export default defineType({
           mimeType: 'woff',
           Rule,
         }),
-    },
-    {
+    }),
+    defineField({
       type: 'file',
       name: 'ttf',
       title: 'TTF file',
@@ -70,8 +70,8 @@ export default defineType({
           mimeType: 'ttf',
           Rule,
         }),
-    },
-    {
+    }),
+    defineField({
       type: 'string',
       name: 'fontStyle',
       title: 'Font style',
@@ -83,8 +83,8 @@ export default defineType({
         ],
         layout: 'radio',
       },
-    },
-    {
+    }),
+    defineField({
       type: 'number',
       name: 'fontWeight',
       title: 'Font weight',
@@ -93,7 +93,7 @@ export default defineType({
         list: fontWeights,
         layout: 'dropdown',
       },
-    },
+    }),
   ],
   preview: {
     select: {

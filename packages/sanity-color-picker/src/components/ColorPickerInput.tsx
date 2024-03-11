@@ -1,8 +1,8 @@
-import type {HSBAColor} from '@shopify/polaris'
+import type {HSBColor} from '@shopify/polaris'
 
 import _ from 'lodash'
 import {z} from 'zod'
-import {ChangeEvent, useCallback, useMemo, useState} from 'react'
+import {FormEvent, useCallback, useMemo, useState} from 'react'
 import {ObjectInputProps, set} from 'sanity'
 import {Box, Card, Dialog, Flex, Text, TextInput} from '@sanity/ui'
 import {ColorPicker, hexToRgb, hsbToRgb, rgbToHex, rgbToHsb} from '@shopify/polaris'
@@ -23,7 +23,6 @@ export const ColorSchema = z.object({
     g: z.number(),
     b: z.number(),
   }),
-  alpha: z.number().optional(),
 })
 
 const debounce = _.debounce
@@ -95,16 +94,15 @@ function ColorPickerDialog(props: {
   value: any
 }) {
   const {toggleDialog, onChange, value} = props
-  const [color, setColor] = useState<HSBAColor>({
-    hue: value?.hsl.h || 0,
-    brightness: value?.hsl.l || 1,
-    saturation: value?.hsl.s || 0.7,
-    alpha: value?.alpha || 1,
+  const [color, setColor] = useState<HSBColor>({
+    hue: typeof value?.hsl.h === 'undefined' ? 0 : value?.hsl.h,
+    brightness: typeof value?.hsl.l === 'undefined' ? 1 : value?.hsl.l,
+    saturation: typeof value?.hsl.s === 'undefined' ? 0 : value?.hsl.s,
   })
-  const [hexInputValue, setHexInputValue] = useState<string>(rgbToHex(hsbToRgb(color)))
 
+  const [hexInputValue, setHexInputValue] = useState<string>(rgbToHex(hsbToRgb(color)))
   const emitSetColor = useCallback(
-    (nextColor: HSBAColor) => {
+    (nextColor: HSBColor) => {
       const rgb = hsbToRgb(nextColor)
       const hex = rgbToHex(rgb)
 
@@ -121,7 +119,6 @@ function ColorPickerDialog(props: {
             g: rgb.green,
             b: rgb.blue,
           },
-          alpha: nextColor.alpha,
         }),
       )
     },
@@ -132,7 +129,7 @@ function ColorPickerDialog(props: {
   const debouncedColorChange = useMemo(() => debounce(emitSetColor, 100), [emitSetColor])
 
   const handleColorPickerChange = useCallback(
-    (newColor: HSBAColor) => {
+    (newColor: HSBColor) => {
       const rgb = hsbToRgb(newColor)
       const hex = rgbToHex(rgb)
 
@@ -169,53 +166,59 @@ function ColorPickerDialog(props: {
 
 function HexInput(props: {
   value: any
-  color: HSBAColor
+  color: HSBColor
   onChange: (value: any) => void
   hexInputValue: string
   setHexInputValue: (value: any) => void
   setColor: (value: any) => void
 }) {
   const {value, color, onChange, hexInputValue, setHexInputValue, setColor} = props
+  const [validity, setValidity] = useState<string | undefined>(undefined)
 
-  const validateHex = useCallback(() => {
-    if (hexaRegex.test(hexInputValue)) {
-      const rgb = hexToRgb(hexInputValue)
-      const hsb = rgbToHsb(rgb)
+  const validateHex = useCallback(
+    (value: string) => {
+      if (hexaRegex.test(value)) {
+        setValidity(undefined)
+        const rgb = hexToRgb(value)
+        const hsb = rgbToHsb(rgb)
 
-      onChange(
-        set({
-          hex: hexInputValue,
-          hsl: {
-            h: hsb.hue,
-            s: hsb.saturation,
-            l: hsb.brightness,
-          },
-          rgb: {
-            r: rgb.red,
-            g: rgb.green,
-            b: rgb.blue,
-          },
-          alpha: value?.alpha,
-        }),
-      )
+        onChange(
+          set({
+            hex: value,
+            hsl: {
+              h: hsb.hue,
+              s: hsb.saturation,
+              l: hsb.brightness,
+            },
+            rgb: {
+              r: rgb.red,
+              g: rgb.green,
+              b: rgb.blue,
+            },
+          }),
+        )
 
-      setColor({
-        hue: hsb.hue,
-        saturation: hsb.saturation,
-        brightness: hsb.brightness,
-        alpha: value?.alpha,
-      })
+        setColor({
+          hue: hsb.hue,
+          saturation: hsb.saturation,
+          brightness: hsb.brightness,
+        })
 
-      return true
-    }
+        return true
+      }
 
-    setHexInputValue(value?.hex)
-    return false
-  }, [hexInputValue, onChange, setColor, value, setHexInputValue])
+      setValidity('Invalid hexadecimal value')
+      return false
+    },
+    [hexInputValue, onChange, setColor, value, setHexInputValue],
+  )
 
   const handleHexInputChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => setHexInputValue(e.currentTarget.value),
-    [setHexInputValue],
+    (e: FormEvent<HTMLInputElement>) => {
+      setHexInputValue(e.currentTarget.value)
+      validateHex(e.currentTarget.value)
+    },
+    [setHexInputValue, validateHex],
   )
 
   return (
@@ -234,9 +237,8 @@ function HexInput(props: {
         style={{
           textTransform: 'uppercase',
         }}
-        // Here we use the `onBlur` event to validate the hexadecimal input value when the user leaves the input field
-        onBlur={validateHex}
-        onChange={handleHexInputChange}
+        customValidity={validity}
+        onChange={(e) => handleHexInputChange(e)}
         value={hexInputValue}
       />
     </Flex>

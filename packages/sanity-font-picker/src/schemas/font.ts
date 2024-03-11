@@ -1,5 +1,5 @@
 import {StringIcon} from '@sanity/icons'
-import {defineField, defineType} from 'sanity'
+import {defineArrayMember, defineField, defineType} from 'sanity'
 
 import ArrayMaxItems from '../components/ArrayMaxItems'
 
@@ -8,19 +8,24 @@ export const font = defineType({
   type: 'document',
   icon: StringIcon,
   title: 'Typography',
+  __experimental_formPreviewTitle: false,
   fields: [
     defineField({
-      type: 'object',
       name: 'heading',
+      type: 'object',
       fields: [
-        defineFontField({
+        defineField({
           name: 'font',
+          type: 'array',
+          of: [defineArrayMember({type: 'fontCategory'})],
+          components: {input: ArrayMaxItems},
+          validation: (Rule: any) => Rule.max(1),
         }),
-        {
+        defineField({
           type: 'boolean',
           name: 'capitalize',
-        },
-        {
+        }),
+        defineField({
           type: 'rangeSlider',
           name: 'baseSize',
           options: {
@@ -29,8 +34,8 @@ export const font = defineType({
             max: 90,
           },
           initialValue: 50,
-        },
-        {
+        }),
+        defineField({
           type: 'rangeSlider',
           name: 'letterSpacing',
           options: {
@@ -39,8 +44,8 @@ export const font = defineType({
             max: 50,
           },
           initialValue: 0,
-        },
-        {
+        }),
+        defineField({
           type: 'rangeSlider',
           name: 'lineHeight',
           options: {
@@ -49,7 +54,7 @@ export const font = defineType({
             step: 0.025,
           },
           initialValue: 1.2,
-        },
+        }),
       ],
       options: {
         collapsible: true,
@@ -64,10 +69,14 @@ export const font = defineType({
       type: 'object',
       name: 'body',
       fields: [
-        defineFontField({
+        defineField({
           name: 'font',
+          type: 'array',
+          of: [defineArrayMember({type: 'fontCategory'})],
+          components: {input: ArrayMaxItems},
+          validation: (Rule: any) => Rule.max(1),
         }),
-        {
+        defineField({
           type: 'rangeSlider',
           name: 'baseSize',
           options: {
@@ -76,8 +85,8 @@ export const font = defineType({
             max: 38,
           },
           initialValue: 16,
-        },
-        {
+        }),
+        defineField({
           type: 'rangeSlider',
           name: 'letterSpacing',
           options: {
@@ -86,8 +95,8 @@ export const font = defineType({
             max: 50,
           },
           initialValue: 0,
-        },
-        {
+        }),
+        defineField({
           type: 'rangeSlider',
           name: 'lineHeight',
           options: {
@@ -96,7 +105,7 @@ export const font = defineType({
             step: 0.2,
           },
           initialValue: 1.2,
-        },
+        }),
       ],
       options: {
         collapsible: true,
@@ -111,14 +120,18 @@ export const font = defineType({
       type: 'object',
       name: 'extra',
       fields: [
-        defineFontField({
+        defineField({
           name: 'font',
+          type: 'array',
+          of: [defineArrayMember({type: 'fontCategory'})],
+          components: {input: ArrayMaxItems},
+          validation: (Rule: any) => Rule.max(1),
         }),
-        {
+        defineField({
           type: 'boolean',
           name: 'capitalize',
-        },
-        {
+        }),
+        defineField({
           type: 'rangeSlider',
           name: 'baseSize',
           options: {
@@ -126,8 +139,8 @@ export const font = defineType({
             min: 12,
             max: 150,
           },
-        },
-        {
+        }),
+        defineField({
           type: 'rangeSlider',
           name: 'letterSpacing',
           options: {
@@ -135,8 +148,8 @@ export const font = defineType({
             min: -20,
             max: 50,
           },
-        },
-        {
+        }),
+        defineField({
           type: 'rangeSlider',
           name: 'lineHeight',
           options: {
@@ -144,7 +157,7 @@ export const font = defineType({
             max: 2,
             step: 0.2,
           },
-        },
+        }),
       ],
       initialValue: {
         baseSize: 16,
@@ -160,15 +173,3 @@ export const font = defineType({
     prepare: () => ({title: 'Typography'}),
   },
 })
-
-function defineFontField(args: {name: string}) {
-  const {name} = args
-
-  return defineField({
-    name,
-    type: 'array',
-    of: [{type: 'fontCategory'}],
-    components: {input: ArrayMaxItems},
-    validation: (Rule: any) => Rule.max(1),
-  })
-}
