@@ -3,9 +3,9 @@
 ## Installation
 
 ```sh
-npm install @headless.build/sanity-color-picker
-yarn add @headless.build/sanity-color-picker
-pnpm install @headless.build/sanity-color-picker
+npm install @frontvibe/sanity-color-picker
+yarn add @frontvibe/sanity-color-picker
+pnpm install @frontvibe/sanity-color-picker
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {colorPicker} from '@headless.build/sanity-color-picker'
+import {colorPicker} from '@frontvibe/sanity-color-picker'
 
 export default defineConfig({
   //...
@@ -24,7 +24,7 @@ export default defineConfig({
 
 ## License
 
-[MIT](LICENSE) © Thomas Cristina de Carvalho
+[MIT](LICENSE) © Le Studio Frontvibe
 
 ## Develop & test
 

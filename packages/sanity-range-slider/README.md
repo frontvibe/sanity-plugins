@@ -1,11 +1,11 @@
-# @headless.build/sanity-plugin-range-slider
+# @frontvibe/sanity-plugin-range-slider
 
 > This is a **Sanity Studio v3** plugin.
 
 ## Installation
 
 ```sh
-npm install @headless.build/sanity-plugin-range-slider
+npm install @frontvibe/sanity-plugin-range-slider
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from '@headless.build/sanity-plugin-range-slider'
+import {myPlugin} from '@frontvibe/sanity-plugin-range-slider'
 
 export default defineConfig({
   //...
@@ -24,7 +24,7 @@ export default defineConfig({
 
 ## License
 
-[MIT](LICENSE) © Thomas Cristina de Carvalho
+[MIT](LICENSE) © Le Studio Frontvibe
 
 ## Develop & test
 

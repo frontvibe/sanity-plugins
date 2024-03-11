@@ -3,9 +3,9 @@
 ## Installation
 
 ```sh
-npm install @headless.build/sanity-font-picker
-yarn add @headless.build/sanity-font-picker
-pnpm install @headless.build/sanity-font-picker
+npm install @frontvibe/sanity-font-picker
+yarn add @frontvibe/sanity-font-picker
+pnpm install @frontvibe/sanity-font-picker
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {fontPicker} from '@headless.build/sanity-font-picker'
+import {fontPicker} from '@frontvibe/sanity-font-picker'
 
 export default defineConfig({
   //...
@@ -24,7 +24,7 @@ export default defineConfig({
 
 ## License
 
-[MIT](LICENSE) © Thomas Cristina de Carvalho
+[MIT](LICENSE) © Le Studio Frontvibe
 
 ## Develop & test
 
