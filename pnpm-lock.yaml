@@ -348,8 +348,8 @@ importers:
   packages/ui:
     devDependencies:
       '@turbo/gen':
-        specifier: ^1.10.12
-        version: 1.12.5(@types/node@20.11.25)(typescript@5.4.2)
+        specifier: ^1.13.3
+        version: 1.13.3(@types/node@20.11.25)(typescript@5.4.2)
       '@types/node':
         specifier: ^20.5.2
         version: 20.11.25
@@ -3937,11 +3937,11 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
-  /@turbo/gen@1.12.5(@types/node@20.11.25)(typescript@5.4.2):
-    resolution: {integrity: sha512-sEF/iryAcWYqONXcrAyWREUVPA4eba22hxU1yx4b9+Rs9SUNFkM54cDaXEAtzbh/iji428aQpnuxi+SUT7m9zw==}
+  /@turbo/gen@1.13.3(@types/node@20.11.25)(typescript@5.4.2):
+    resolution: {integrity: sha512-l+EM1gGzckFMaaVQyj3BVRa0QJ+tpp8HfiHOhGpBWW3Vc0Hfj92AY87Di/7HGABa+HVY7ueatMi7DJG+zkJBYg==}
     hasBin: true
     dependencies:
-      '@turbo/workspaces': 1.12.5
+      '@turbo/workspaces': 1.13.3
       chalk: 2.4.2
       commander: 10.0.1
       fs-extra: 10.1.0
@@ -3960,8 +3960,8 @@ packages:
       - typescript
     dev: true
 
-  /@turbo/workspaces@1.12.5:
-    resolution: {integrity: sha512-UksAe6nxryEZoUr5IMUzt9bwsZLxccUnT469fI3OE5Xbd5fbInzLKIZ3ZuzFvXR4N7ezr2HCvkUItmgwe7k1HA==}
+  /@turbo/workspaces@1.13.3:
+    resolution: {integrity: sha512-QYZ8g3IVQebqNM8IsBlWYOWmOKjBZY55e6lx4EDOLuch1iWmyk+U8CLAI9UomMrSaKTs1Sx+PDkt63EgakvhUw==}
     hasBin: true
     dependencies:
       chalk: 2.4.2
