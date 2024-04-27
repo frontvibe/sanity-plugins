@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@frontvibe/sanity-plugin-range-slider": "workspace:^",
-    "@sanity/pkg-utils": "^5.0.0",
+    "@sanity/pkg-utils": "^6.8.7",
     "@sanity/plugin-kit": "^3.1.10",
     "@types/react": "^18.2.64",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
