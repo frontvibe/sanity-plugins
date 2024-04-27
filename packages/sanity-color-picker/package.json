@@ -43,7 +43,7 @@
     "@sanity/icons": "^2.11.2",
     "@sanity/incompatible-plugin": "^1.0.4",
     "@sanity/ui": "^2.0.7",
-    "@shopify/polaris": "^12.20.0",
+    "@shopify/polaris": "^13.2.0",
     "lodash": "^4.17.21",
     "zod": "^3.22.4"
   },
