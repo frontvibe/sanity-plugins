@@ -62,7 +62,7 @@
     "prettier-plugin-packagejson": "^2.4.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-is": "^18.2.0",
+    "react-is": "^18.3.1",
     "rimraf": "^5.0.5",
     "sanity": "^3.39.1",
     "styled-components": "^6.1.8",
