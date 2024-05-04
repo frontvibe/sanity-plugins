@@ -11,6 +11,8 @@
   ignoreDeps: [
     // manually bumping deps
     "eslint",
+    "@sanity/pkg-utils",
+    "@sanity/plugin-kit",
 
     // manually bumping workflow actions
     "actions/labeler",
