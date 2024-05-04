@@ -1,8 +1,9 @@
-import {RangeSlider} from '@shopify/polaris'
-import {CSSProperties, ChangeEvent, useCallback, useMemo, useState} from 'react'
-import {NumberInputProps, set} from 'sanity'
 import {Flex, TextInput, useTheme} from '@sanity/ui'
+import {RangeSlider} from '@shopify/polaris'
 import _ from 'lodash'
+import type React from 'react'
+import {ChangeEvent, CSSProperties, useCallback, useMemo, useState} from 'react'
+import {NumberInputProps, set} from 'sanity'
 
 const debounce = _.debounce
 
@@ -17,7 +18,7 @@ type RangeSliderInputProps = NumberInputProps & {
   }
 }
 
-export function RangeSliderInput(props: RangeSliderInputProps) {
+export function RangeSliderInput(props: RangeSliderInputProps): React.JSX.Element {
   const {schemaType, value, onChange} = props
   const {options} = schemaType
   const suffix = options?.suffix

@@ -1,6 +1,5 @@
-import type {ArrayOfPrimitivesInputProps} from 'sanity'
-
 import React from 'react'
+import type {ArrayOfPrimitivesInputProps} from 'sanity'
 import {ArrayOfPrimitivesFunctions} from 'sanity'
 
 function ArrayFunctions(props: any) {

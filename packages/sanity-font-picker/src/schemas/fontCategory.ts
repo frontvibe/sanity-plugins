@@ -1,5 +1,5 @@
-import {defineArrayMember, defineField, defineType} from 'sanity'
 import {StringIcon} from '@sanity/icons'
+import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export default defineType({
   type: 'object',

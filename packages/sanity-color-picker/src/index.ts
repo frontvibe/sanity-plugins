@@ -1,9 +1,13 @@
+import '@shopify/polaris/build/esm/styles.css'
+
 import {definePlugin} from 'sanity'
-import {colorSchema} from './schemas/color'
+
 import pkgjson from '../package.json'
+import {colorSchema} from './schemas/color'
 
 const pluginName = pkgjson.name
 
+/** @public */
 export const colorPicker = definePlugin(() => {
   return {
     name: pluginName,
@@ -13,4 +17,4 @@ export const colorPicker = definePlugin(() => {
   }
 })
 
-export type {ColorInputValue, ColorInputProps, ColorDefinition} from './types'
+export * from './types'

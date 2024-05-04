@@ -2,31 +2,31 @@
   "name": "@frontvibe/sanity-color-picker",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "keywords": [
     "sanity",
     "sanity-plugin"
   ],
+  "sideEffects": false,
   "license": "MIT",
   "author": "Le Studio Frontvibe",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "source": "./src/index.ts",
-      "require": "./dist/index.js",
       "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs",
       "default": "./dist/index.esm.js"
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.esm.js",
   "source": "./src/index.ts",
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "sanity.json",
-    "src",
-    "v2-incompatible.js"
+    "src"
   ],
   "scripts": {
     "dev": "run-s watch",
@@ -84,7 +84,8 @@
   },
   "sanityPlugin": {
     "verifyPackage": {
-      "dependencies": false
+      "dependencies": false,
+      "sanityV2Json": false
     }
   }
 }

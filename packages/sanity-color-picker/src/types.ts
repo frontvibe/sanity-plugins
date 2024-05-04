@@ -1,14 +1,18 @@
-import {ObjectInputProps, ObjectDefinition} from 'sanity'
-import {colorTypeName} from './schemas/color'
+import {ObjectDefinition, ObjectInputProps} from 'sanity'
 import {z} from 'zod'
-import {ColorSchema} from './components/ColorPickerInput'
 
+import {ColorSchema} from './components/ColorPickerInput'
+import {colorTypeName} from './schemas/color'
+
+export {ColorSchema, colorTypeName}
+
+/** @public */
 export type ColorInputValue = z.infer<typeof ColorSchema>
+
+/** @public */
 export type ColorInputProps = ObjectInputProps<ColorInputValue>
 
-/**
- * @public
- */
+/** @public */
 export interface ColorDefinition extends Omit<ObjectDefinition, 'type' | 'fields'> {
   type: typeof colorTypeName
 }
