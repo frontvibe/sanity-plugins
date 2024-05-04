@@ -51,7 +51,7 @@
     "@sanity/icons": "^2.11.8",
     "@sanity/incompatible-plugin": "^1.0.4",
     "@sanity/ui": "^2.1.6",
-    "@shopify/polaris": "^12.27.0",
+    "@shopify/polaris": "^13.2.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
