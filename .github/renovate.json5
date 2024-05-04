@@ -8,6 +8,7 @@
   ],
   labels: ["dependencies"],
   rangeStrategy: "bump",
+  includePaths: ["packages/sanity-*"],
   ignoreDeps: [
     // manually bumping deps
     "eslint",

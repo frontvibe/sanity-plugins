@@ -1,10 +1,7 @@
 ---
-'headfront-debug': patch
-'eslint-config-custom': patch
-'@frontvibe/sanity-color-picker': patch
-'@frontvibe/sanity-font-picker': patch
-'@frontvibe/sanity-plugin-range-slider': patch
-'ui': patch
+"@frontvibe/sanity-color-picker": patch
+"@frontvibe/sanity-font-picker": patch
+"@frontvibe/sanity-plugin-range-slider": patch
 ---
 
 Updated dependency `@sanity/icons` to `^2.11.8`.
