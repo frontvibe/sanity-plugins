@@ -6,6 +6,8 @@
     "group:allNonMajor",
     ":disablePeerDependencies",
   ],
+  timezone: "America/Los_Angeles",
+  schedule: ["before 4am on monday"],
   labels: ["dependencies"],
   rangeStrategy: "bump",
   includePaths: ["packages/**"],
