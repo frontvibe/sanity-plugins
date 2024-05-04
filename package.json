@@ -10,11 +10,6 @@
     "version": "changeset version",
     "typecheck": "turbo run typecheck"
   },
-  "workspaces": [
-    "packages/sanity-color-picker",
-    "packages/sanity-font-picker",
-    "packages/sanity-range-slider"
-  ],
   "packageManager": "pnpm@8.6.10",
   "dependencies": {
     "@changesets/cli": "^2.27.1",
