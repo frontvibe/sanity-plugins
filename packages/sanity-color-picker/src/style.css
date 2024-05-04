@@ -1,0 +1,5 @@
+@import '@shopify/polaris/build/esm/styles.css';
+
+html {
+  backgound: black;
+}

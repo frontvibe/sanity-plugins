@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+
 import {ColorPickerInput} from '../components/ColorPickerInput'
 
 /**

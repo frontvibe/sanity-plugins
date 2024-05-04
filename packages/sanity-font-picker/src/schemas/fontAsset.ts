@@ -1,5 +1,5 @@
 import {StringIcon} from '@sanity/icons'
-import {File, defineField, defineType} from 'sanity'
+import {defineField, defineType, File} from 'sanity'
 
 const fontWeights = [
   {title: 'Thin - 100', value: 100},

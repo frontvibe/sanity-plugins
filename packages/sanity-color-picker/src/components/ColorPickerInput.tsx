@@ -1,16 +1,14 @@
+import {Box, Card, Dialog, Flex, Text, TextInput} from '@sanity/ui'
 import type {HSBColor} from '@shopify/polaris'
-
+import {ColorPicker, hexToRgb, hsbToRgb, rgbToHex, rgbToHsb} from '@shopify/polaris'
 import _ from 'lodash'
-import {z} from 'zod'
 import {FormEvent, useCallback, useMemo, useState} from 'react'
 import {ObjectInputProps, set} from 'sanity'
-import {Box, Card, Dialog, Flex, Text, TextInput} from '@sanity/ui'
-import {ColorPicker, hexToRgb, hsbToRgb, rgbToHex, rgbToHsb} from '@shopify/polaris'
-
-import '@shopify/polaris/build/esm/styles.css'
+import {z} from 'zod'
 
 const hexaRegex = /^#([0-9A-Fa-f]{3}){1,2}$/
 
+/** @public */
 export const ColorSchema = z.object({
   hex: z.string().refine((value) => hexaRegex.test(value)),
   hsl: z.object({
