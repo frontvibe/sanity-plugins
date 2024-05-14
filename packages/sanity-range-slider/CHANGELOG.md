@@ -1,5 +1,13 @@
 # @frontvibe/sanity-plugin-range-slider
 
+## 1.0.2
+
+### Patch Changes
+
+- 916ac48: Updated dependency `@shopify/polaris` to `^13.2.0`.
+- 923fe1d: Updated dependency `npm-run-all2` to `^5.0.0`.
+- 6dca4e2: Updated dependency `npm-run-all2` to `^6.1.2`.
+
 ## 1.0.1
 
 ### Patch Changes
