@@ -1,5 +1,16 @@
 # @frontvibe/sanity-font-picker
 
+## 1.0.2
+
+### Patch Changes
+
+- 923fe1d: Updated dependency `npm-run-all2` to `^5.0.0`.
+- 6dca4e2: Updated dependency `npm-run-all2` to `^6.1.2`.
+- Updated dependencies [916ac48]
+- Updated dependencies [923fe1d]
+- Updated dependencies [6dca4e2]
+  - @frontvibe/sanity-plugin-range-slider@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes

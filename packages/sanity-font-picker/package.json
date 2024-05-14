@@ -1,6 +1,6 @@
 {
   "name": "@frontvibe/sanity-font-picker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "",
   "keywords": [
@@ -69,7 +69,7 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@frontvibe/sanity-plugin-range-slider": "^1.0.1",
+    "@frontvibe/sanity-plugin-range-slider": "^1.0.2",
     "react": "^18",
     "sanity": "^3"
   },
