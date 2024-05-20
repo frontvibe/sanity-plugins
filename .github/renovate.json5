@@ -10,7 +10,7 @@
   schedule: ["before 4am on monday"],
   labels: ["dependencies"],
   rangeStrategy: "bump",
-  includePaths: ["packages/**"],
+  includePaths: ["packages/**", "apps/**"],
   ignorePaths: ["packages/tsconfig", "packages/eslint-config-custom"],
   ignoreDeps: [
     // manually bumping deps
@@ -25,5 +25,17 @@
     "node",
     "npm",
     "pnpm",
+  ],
+  packageRules: [
+    {
+      matchPaths: ["apps/**"],
+      groupName: "apps dependencies",
+      enabled: true,
+    },
+    {
+      matchPaths: ["packages/**"],
+      groupName: "packages dependencies",
+      enabled: true,
+    },
   ],
 }
