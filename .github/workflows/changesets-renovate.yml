@@ -4,8 +4,8 @@ on:
   pull_request_target:
     paths:
       - ".github/workflows/changesets-renovate.yml"
-      - "**/pnpm-lock.yaml"
-      - "**/package.json"
+      - "apps/**/pnpm-lock.yaml"
+      - "apps/**/package.json"
 
 jobs:
   generate-changeset:
