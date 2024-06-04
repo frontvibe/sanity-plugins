@@ -18,19 +18,19 @@
     "@frontvibe/sanity-color-picker": "workspace:*",
     "@frontvibe/sanity-font-picker": "workspace:*",
     "@frontvibe/sanity-plugin-range-slider": "workspace:*",
-    "@sanity/vision": "^3.42.1",
+    "@sanity/vision": "^3.44.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
-    "sanity": "^3.42.1",
+    "sanity": "^3.44.0",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^3.0.1",
-    "@types/react": "^18.3.2",
+    "@types/react": "^18.3.3",
     "@types/styled-components": "^5.1.34",
     "eslint": "^8.57.0",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.0",
     "typescript": "^5.4.5"
   },
   "prettier": {
