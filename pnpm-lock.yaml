@@ -91,8 +91,8 @@ importers:
   packages/sanity-color-picker:
     dependencies:
       '@sanity/icons':
-        specifier: ^2.11.8
-        version: 2.11.8(react@18.3.1)
+        specifier: ^3.0.0
+        version: 3.0.0(react@18.3.1)
       '@sanity/incompatible-plugin':
         specifier: ^1.0.4
         version: 1.0.4(react-dom@18.3.1)(react@18.3.1)
@@ -182,8 +182,8 @@ importers:
   packages/sanity-font-picker:
     dependencies:
       '@sanity/icons':
-        specifier: ^2.11.8
-        version: 2.11.8(react@18.3.1)
+        specifier: ^3.0.0
+        version: 3.0.0(react@18.3.1)
       '@sanity/incompatible-plugin':
         specifier: ^1.0.4
         version: 1.0.4(react-dom@18.3.1)(react@18.3.1)
@@ -261,8 +261,8 @@ importers:
   packages/sanity-range-slider:
     dependencies:
       '@sanity/icons':
-        specifier: ^2.11.8
-        version: 2.11.8(react@18.3.1)
+        specifier: ^3.0.0
+        version: 3.0.0(react@18.3.1)
       '@sanity/incompatible-plugin':
         specifier: ^1.0.4
         version: 1.0.4(react-dom@18.3.1)(react@18.3.1)
@@ -3516,16 +3516,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@sanity/client@6.19.1:
-    resolution: {integrity: sha512-D3ZDc1xj0a+lAnsAd5oXc4+JStJ92Z1GlkgL2+6PoKcqiK6xAQUXwcrUwgniWzzSmafXxBJYokpg/i1VuI/mCA==}
-    engines: {node: '>=14.18'}
-    dependencies:
-      '@sanity/eventsource': 5.0.2
-      get-it: 8.5.0
-      rxjs: 7.8.1
-    transitivePeerDependencies:
-      - debug
-
   /@sanity/client@6.19.1(debug@3.2.7):
     resolution: {integrity: sha512-D3ZDc1xj0a+lAnsAd5oXc4+JStJ92Z1GlkgL2+6PoKcqiK6xAQUXwcrUwgniWzzSmafXxBJYokpg/i1VuI/mCA==}
     engines: {node: '>=14.18'}
@@ -3541,7 +3531,7 @@ packages:
     engines: {node: '>=14.18'}
     dependencies:
       '@sanity/eventsource': 5.0.2
-      get-it: 8.5.0(debug@4.3.4)
+      get-it: 8.5.0
       rxjs: 7.8.1
     transitivePeerDependencies:
       - debug
@@ -3633,15 +3623,6 @@ packages:
     resolution: {integrity: sha512-5wVG/vIiGuGrSmq+Bl3PY7XDgQrGv0fyHdJI64FSulnr2wH3NMqZ6C59UFxnrZ93sr7kOt0zQFoNv2lkPBi0Cg==}
     peerDependencies:
       react: ^16.9 || ^17 || ^18
-    dependencies:
-      react: 18.3.1
-    dev: false
-
-  /@sanity/icons@2.11.8(react@18.3.1):
-    resolution: {integrity: sha512-C4ViXtk6eyiNTQ5OmxpfmcK6Jw+LLTi9zg9XBUD15DzC4xTHaGW9SVfUa43YtPGs3WC3M0t0K59r0GDjh52HIg==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      react: ^18
     dependencies:
       react: 18.3.1
     dev: false
@@ -3959,7 +3940,7 @@ packages:
     peerDependencies:
       '@sanity/client': ^6.19.1
     dependencies:
-      '@sanity/client': 6.19.1
+      '@sanity/client': 6.19.1(debug@4.3.4)
       '@sanity/icons': 3.0.0(react@18.3.1)
       '@sanity/preview-url-secret': 1.6.17(@sanity/client@6.19.1)
       '@sanity/ui': 2.3.2(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.11)
@@ -3985,7 +3966,7 @@ packages:
     peerDependencies:
       '@sanity/client': ^6.19.1
     dependencies:
-      '@sanity/client': 6.19.1
+      '@sanity/client': 6.19.1(debug@4.3.4)
       '@sanity/uuid': 3.0.2
 
   /@sanity/schema@3.45.0(debug@3.2.7):
