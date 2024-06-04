@@ -23,4 +23,4 @@ jobs:
           git config --global user.email 'thomas@frontvibe.com'
       - uses: pnpm/action-setup@v3
       - name: Run changesets-renovate
-        run: pnpm dlx @scaleway/changesets-renovate@2.0.2
+        run: pnpm dlx @scaleway/changesets-renovate@latest
