@@ -117,7 +117,7 @@ importers:
         version: 3.1.10(eslint@8.57.0)(typescript@5.4.5)
       '@sanity/types':
         specifier: ^3.45.0
-        version: 3.45.0
+        version: 3.45.0(debug@4.3.4)
       '@types/lodash':
         specifier: ^4.17.5
         version: 4.17.5
@@ -4016,15 +4016,6 @@ packages:
       '@types/react': 18.3.3
     transitivePeerDependencies:
       - debug
-
-  /@sanity/types@3.45.0:
-    resolution: {integrity: sha512-CjqeGDbp7iEQtw5ceFMZGCIKckZd77c4x34eZ530oKRiXaxS0hcpWgHd3hDK+xWuNFiaJcPG2OqbFUfRpGrRoQ==}
-    dependencies:
-      '@sanity/client': 6.19.1
-      '@types/react': 18.3.3
-    transitivePeerDependencies:
-      - debug
-    dev: true
 
   /@sanity/types@3.45.0(debug@3.2.7):
     resolution: {integrity: sha512-CjqeGDbp7iEQtw5ceFMZGCIKckZd77c4x34eZ530oKRiXaxS0hcpWgHd3hDK+xWuNFiaJcPG2OqbFUfRpGrRoQ==}
@@ -10145,7 +10136,7 @@ packages:
       '@sanity/bifur-client': 0.4.0
       '@sanity/block-tools': 3.45.0
       '@sanity/cli': 3.45.0
-      '@sanity/client': 6.19.1
+      '@sanity/client': 6.19.1(debug@4.3.4)
       '@sanity/color': 3.0.6
       '@sanity/diff': 3.45.0
       '@sanity/diff-match-patch': 3.1.1
