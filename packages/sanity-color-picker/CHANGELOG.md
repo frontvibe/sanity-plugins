@@ -1,5 +1,23 @@
 # @frontvibe/sanity-color-picker
 
+## 1.0.5
+
+### Patch Changes
+
+- 6d29300: Updated dependency `@sanity/ui` to `^2.3.1`.
+  Updated dependency `prettier` to `^3.3.1`.
+  Updated dependency `sanity` to `^3.45.0`.
+  Updated dependency `@sanity/types` to `^3.45.0`.
+  Updated dependency `@types/lodash` to `^4.17.5`.
+- 040d997: Updated dependency `@sanity/icons` to `^3.2.0`.
+  Updated dependency `@sanity/ui` to `^2.4.0`.
+  Updated dependency `@typescript-eslint/eslint-plugin` to `^7.13.1`.
+  Updated dependency `@typescript-eslint/parser` to `^7.13.1`.
+  Updated dependency `prettier` to `^3.3.2`.
+  Updated dependency `sanity` to `^3.46.1`.
+  Updated dependency `@sanity/types` to `^3.46.1`.
+- 1166b5e: Updated dependency `@sanity/icons` to `^3.0.0`.
+
 ## 1.0.4
 
 ### Patch Changes
