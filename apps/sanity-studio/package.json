@@ -18,11 +18,11 @@
     "@frontvibe/sanity-color-picker": "workspace:*",
     "@frontvibe/sanity-font-picker": "workspace:*",
     "@frontvibe/sanity-plugin-range-slider": "workspace:*",
-    "@sanity/vision": "^3.46.1",
+    "@sanity/vision": "^3.48.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
-    "sanity": "^3.46.1",
+    "sanity": "^3.48.1",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
@@ -31,7 +31,7 @@
     "@types/styled-components": "^5.1.34",
     "eslint": "^8.57.0",
     "prettier": "^3.3.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   },
   "prettier": {
     "semi": false,
