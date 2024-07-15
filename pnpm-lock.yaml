@@ -70,8 +70,8 @@ importers:
         specifier: ^8.57.0
         version: 8.57.0
       prettier:
-        specifier: ^3.3.2
-        version: 3.3.2
+        specifier: ^3.3.3
+        version: 3.3.3
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -9468,6 +9468,19 @@ packages:
         optional: true
     dependencies:
       prettier: 3.2.5
+      sort-package-json: 2.10.0
+      synckit: 0.9.0
+    dev: true
+
+  /prettier-plugin-packagejson@2.5.0(prettier@3.3.3):
+    resolution: {integrity: sha512-6XkH3rpin5QEQodBSVNg+rBo4r91g/1mCaRwS1YGdQJZ6jwqrg2UchBsIG9tpS1yK1kNBvOt84OILsX8uHzBGg==}
+    peerDependencies:
+      prettier: '>= 1.16.0'
+    peerDependenciesMeta:
+      prettier:
+        optional: true
+    dependencies:
+      prettier: 3.3.3
       sort-package-json: 2.10.0
       synckit: 0.9.0
     dev: true
