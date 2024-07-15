@@ -1,5 +1,15 @@
 # @frontvibe/sanity-font-picker
 
+## 1.0.8
+
+### Patch Changes
+
+- 4567a25: Updated dependency `@sanity/ui` to `^2.6.8`.
+  Updated dependency `eslint-plugin-react` to `^7.34.4`.
+  Updated dependency `prettier` to `^3.3.3`.
+- Updated dependencies [4567a25]
+  - @frontvibe/sanity-plugin-range-slider@1.0.8
+
 ## 1.0.7
 
 ### Patch Changes
