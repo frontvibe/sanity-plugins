@@ -49,8 +49,8 @@
     "@sanity/pkg-utils": "^5.0.0",
     "@sanity/plugin-kit": "^3.1.10",
     "@types/react": "^18.3.3",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.17.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-sanity": "^7.1.2",
@@ -63,15 +63,15 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
-    "rimraf": "^5.0.9",
-    "sanity": "^3.52.2",
+    "rimraf": "^5.0.10",
+    "sanity": "^3.52.4",
     "styled-components": "^6.1.12",
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "@frontvibe/sanity-plugin-range-slider": "^1.0.9",
     "react": "^18.3.1",
-    "sanity": "^3.52.2"
+    "sanity": "^3.52.4"
   },
   "browserslist": "extends @sanity/browserslist-config",
   "engines": {
