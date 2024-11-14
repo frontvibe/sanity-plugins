@@ -1,5 +1,14 @@
 # headfront-debug
 
+## 1.0.9
+
+### Patch Changes
+
+- Updated dependencies [9d8583b]
+  - @frontvibe/sanity-color-picker@1.0.10
+  - @frontvibe/sanity-font-picker@1.0.10
+  - @frontvibe/sanity-plugin-range-slider@1.0.10
+
 ## 1.0.8
 
 ### Patch Changes
