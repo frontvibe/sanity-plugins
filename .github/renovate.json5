@@ -1,41 +1,52 @@
 {
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    "config:recommended",
-    "schedule:weekly",
-    "group:allNonMajor",
-    ":disablePeerDependencies",
+    'config:recommended',
+    'schedule:weekly',
+    'group:allNonMajor',
+    ':disablePeerDependencies',
   ],
-  reviewers: ["team:frontvibe/maintainers"],
-  timezone: "America/Los_Angeles",
-  schedule: ["before 4am on monday"],
-  labels: ["dependencies"],
-  rangeStrategy: "bump",
-  includePaths: ["packages/**", "apps/**"],
-  ignorePaths: ["packages/tsconfig", "packages/eslint-config-custom"],
+  reviewers: [
+    'team:frontvibe/maintainers',
+  ],
+  timezone: 'America/Los_Angeles',
+  schedule: [
+    'before 4am on monday',
+  ],
+  labels: [
+    'dependencies',
+  ],
+  rangeStrategy: 'bump',
+  includePaths: [
+    'packages/**',
+    'apps/**',
+  ],
+  ignorePaths: [
+    'packages/tsconfig',
+    'packages/eslint-config-custom',
+  ],
   ignoreDeps: [
-    // manually bumping deps
-    "eslint",
-    "@sanity/pkg-utils",
-    "@sanity/plugin-kit",
-
-    // manually bumping workflow actions
-    "actions/labeler",
-
-    // ignore "engines" update
-    "node",
-    "npm",
-    "pnpm",
+    'eslint',
+    '@sanity/pkg-utils',
+    '@sanity/plugin-kit',
+    'actions/labeler',
+    'node',
+    'npm',
+    'pnpm',
   ],
   packageRules: [
     {
-      matchPaths: ["apps/**"],
-      groupName: "apps dependencies",
+      matchFileNames: [
+        'apps/**',
+      ],
+      groupName: 'apps dependencies',
       enabled: true,
     },
     {
-      matchPaths: ["packages/**"],
-      groupName: "packages dependencies",
+      matchFileNames: [
+        'packages/**',
+      ],
+      groupName: 'packages dependencies',
       enabled: true,
     },
   ],
