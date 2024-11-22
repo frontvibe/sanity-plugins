@@ -1,5 +1,16 @@
 # @frontvibe/sanity-font-picker
 
+## 1.0.11
+
+### Patch Changes
+
+- 89e6bfb: Updated dependency `@sanity/ui` to `^2.8.24`.
+  Updated dependency `prettier-plugin-packagejson` to `^2.5.5`.
+  Updated dependency `sanity` to `^3.64.3`.
+  Updated dependency `@sanity/types` to `^3.64.3`.
+- Updated dependencies [89e6bfb]
+  - @frontvibe/sanity-plugin-range-slider@1.0.11
+
 ## 1.0.10
 
 ### Patch Changes
