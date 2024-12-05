@@ -40,9 +40,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@sanity/icons": "^3.4.0",
+    "@sanity/icons": "^3.5.0",
     "@sanity/incompatible-plugin": "^1.0.4",
-    "@sanity/ui": "^2.8.25",
+    "@sanity/ui": "^2.9.1",
     "@shopify/polaris": "^13.9.1",
     "lodash": "^4.17.21",
     "zod": "^3.23.8"
@@ -50,9 +50,9 @@
   "devDependencies": {
     "@sanity/pkg-utils": "^5.0.0",
     "@sanity/plugin-kit": "^3.1.10",
-    "@sanity/types": "^3.64.3",
+    "@sanity/types": "^3.66.0",
     "@types/lodash": "^4.17.13",
-    "@types/react": "^18.3.12",
+    "@types/react": "^18.3.14",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
@@ -62,19 +62,19 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "npm-run-all2": "^6.2.6",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.2",
     "prettier-plugin-packagejson": "^2.5.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
     "rimraf": "^5.0.10",
-    "sanity": "^3.64.3",
+    "sanity": "^3.66.0",
     "styled-components": "^6.1.13",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "react": "^18.3.1",
-    "sanity": "^3.64.3"
+    "sanity": "^3.66.0"
   },
   "engines": {
     "node": ">=14"
