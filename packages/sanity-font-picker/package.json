@@ -42,7 +42,7 @@
   "dependencies": {
     "@sanity/icons": "^3.5.0",
     "@sanity/incompatible-plugin": "^1.0.4",
-    "@sanity/ui": "^2.9.1"
+    "@sanity/ui": "^2.10.1"
   },
   "devDependencies": {
     "@frontvibe/sanity-plugin-range-slider": "workspace:^",
@@ -64,14 +64,14 @@
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
     "rimraf": "^5.0.10",
-    "sanity": "^3.66.0",
+    "sanity": "^3.66.1",
     "styled-components": "^6.1.13",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "@frontvibe/sanity-plugin-range-slider": "^1.0.12",
     "react": "^18.3.1",
-    "sanity": "^3.66.0"
+    "sanity": "^3.66.1"
   },
   "browserslist": "extends @sanity/browserslist-config",
   "engines": {
