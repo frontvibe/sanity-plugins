@@ -1,5 +1,23 @@
 # @frontvibe/sanity-font-picker
 
+## 1.0.13
+
+### Patch Changes
+
+- c4c39e2: Updated dependency `@sanity/icons` to `^3.5.2`.
+  Updated dependency `@sanity/ui` to `^2.10.7`.
+  Updated dependency `sanity` to `^3.67.0`.
+  Updated dependency `zod` to `^3.24.0`.
+  Updated dependency `@sanity/types` to `^3.67.0`.
+- fb83b0b: Updated dependency `@sanity/ui` to `^2.10.9`.
+  Updated dependency `@types/react` to `^18.3.16`.
+  Updated dependency `sanity` to `^3.67.1`.
+  Updated dependency `zod` to `^3.24.1`.
+  Updated dependency `@sanity/types` to `^3.67.1`.
+- Updated dependencies [c4c39e2]
+- Updated dependencies [fb83b0b]
+  - @frontvibe/sanity-plugin-range-slider@1.0.13
+
 ## 1.0.12
 
 ### Patch Changes
