@@ -40,15 +40,15 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@sanity/icons": "^3.5.2",
-    "@sanity/incompatible-plugin": "^1.0.4",
-    "@sanity/ui": "^2.10.9"
+    "@sanity/icons": "^3.5.6",
+    "@sanity/incompatible-plugin": "^1.0.5",
+    "@sanity/ui": "^2.10.12"
   },
   "devDependencies": {
     "@frontvibe/sanity-plugin-range-slider": "workspace:^",
     "@sanity/pkg-utils": "^5.0.0",
     "@sanity/plugin-kit": "^3.1.10",
-    "@types/react": "^18.3.16",
+    "@types/react": "^18.3.18",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
@@ -64,14 +64,14 @@
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
     "rimraf": "^5.0.10",
-    "sanity": "^3.67.1",
+    "sanity": "^3.68.3",
     "styled-components": "^6.1.13",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "@frontvibe/sanity-plugin-range-slider": "^1.0.12",
     "react": "^18.3.1",
-    "sanity": "^3.67.1"
+    "sanity": "^3.68.3"
   },
   "browserslist": "extends @sanity/browserslist-config",
   "engines": {
