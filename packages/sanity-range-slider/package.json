@@ -48,17 +48,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@sanity/icons": "^3.5.2",
-    "@sanity/incompatible-plugin": "^1.0.4",
-    "@sanity/ui": "^2.10.9",
-    "@shopify/polaris": "^13.9.1",
+    "@sanity/icons": "^3.5.6",
+    "@sanity/incompatible-plugin": "^1.0.5",
+    "@sanity/ui": "^2.10.12",
+    "@shopify/polaris": "^13.9.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@sanity/pkg-utils": "^5.0.0",
     "@sanity/plugin-kit": "^3.1.10",
     "@types/lodash": "^4.17.13",
-    "@types/react": "^18.3.16",
+    "@types/react": "^18.3.18",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
@@ -74,13 +74,13 @@
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
     "rimraf": "^5.0.10",
-    "sanity": "^3.67.1",
+    "sanity": "^3.68.3",
     "styled-components": "^6.1.13",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "react": "^18.3.1",
-    "sanity": "^3.67.1"
+    "sanity": "^3.68.3"
   },
   "engines": {
     "node": ">=14"
